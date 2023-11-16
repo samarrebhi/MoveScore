@@ -1,0 +1,108 @@
+
+<body>
+    <div class="container">
+    <div class="photo">
+      <img src="assets/esprit.jpg" alt="Votre photo">
+    </div>
+    <div class="bande">
+      <img src="assets/formulaire.png" alt="formulaire" class="form"> 
+  
+      <h1>Formulaire de postulation</h1>
+    </div>
+  <div class="container-form">
+    <div class="bande1"><h2>Informations personelles :</h2>
+      <form class="formulaire">
+        <!-- Form fields -->
+        <div class="right">
+        <label for="nom">Nom:</label>
+        <input type="text" id="nom" name="nom" required>
+  
+        <label for="prenom">Prénom:</label>
+        <input type="text" id="prenom" name="prenom" required>
+       </div>
+       <div class="left">
+  
+        <label for="email">Adresse Email:</label>
+        <input type="email" id="email" name="email" required>
+  
+        <label for="option">Option:</label>
+        <div class="new-entry">
+          <select id="option" name="option" [(ngModel)]="selectedOption" required>
+            <option value="DS">DS</option>
+            <option value="INFINI">INFINI</option>
+            <option value="BI">BI</option>
+            <option value="GL">GL</option>
+            <option value="SIM">SIM</option>
+            <option value="TWIN">TWIN</option>
+            <option value="SLEAM">SLEAM</option>
+            <option value="NIDS">NIDS</option>
+            <option value="SE">SE</option>
+            <option value="ARCTIC">ARCTIC</option>
+          </select>
+        </div>
+       </div></form></div>
+       <div class="bande2"><h3>Résultats Académiques:</h3>
+        <form class="partie">
+          <div class="naw">
+            <h4>Où avez-vous effectué vos études :</h4>
+            <label>
+              <input type="radio" name="education" [(ngModel)]="selectedEducation" [value]="'ESPRIT'">
+              ESPRIT
+            </label>
+            <label>
+              <input type="radio" name="education" [(ngModel)]="selectedEducation" [value]="'Prépa'">
+              Prépa
+            </label>
+            <label>
+              <input type="radio" name="education" [(ngModel)]="selectedEducation" [value]="'Licence'">
+              Licence
+            </label>
+  
+              <h4>Vous devez ajouter vos relevés des notes</h4>
+  
+              </div>
+              <div class="file-input-container ">
+                <input type="file" id="fileUpload" name="fileUpload" (change)="onFileChange($event)" accept=".jpg, .png, .pdf">
+                <!---->
+        </div>
+          <div class="sam">
+  
+  
+  
+              <label>
+                Moyenne de la 1ère année :
+                <input type="number" name="moyenne1" step="0.01" required>
+              </label>
+  
+  
+  
+              <label>
+                Moyenne de la 2ème année :
+                <input type="number" name="moyenne2" step="0.01" required>
+              </label>
+  
+  
+  
+              <label>
+                Moyenne de la 3ème année :
+                <input type="number" name="moyenne3" step="0.01" required>
+              </label>
+              <div *ngIf="selectedEducation === 'Licence'" class="sam">
+                <label>
+                  Moyenne de 3ème année (Licence) :
+                  <input type="number" name="moyenne3" [(ngModel)]="moyenne3" step="0.01" required>
+                </label></div>
+            </div>
+  
+            <button type="submit" (click)="onSubmit()" class="nedia">Postuler</button>
+             
+          </form>
+          <button class="navigation-button" (click)="backtochoix()">retourner à la liste d'offres </button>
+  
+  </div>
+  
+   </div>
+  
+   </div>
+  
+  </body>

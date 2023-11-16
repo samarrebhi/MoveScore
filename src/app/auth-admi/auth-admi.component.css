@@ -1,0 +1,68 @@
+.container {
+    display: flex;
+    
+  }
+  
+  .photo-section {
+    flex: 1;
+    padding: 20px;
+    
+  }
+  .photo-image {
+    width: 620px; /* Ajustez cette valeur selon vos besoins */
+    height: 500px;
+  }
+  .red-line {
+    width: 2px;
+    height: 100vh; /* Hauteur de la ligne, ajustez selon vos besoins */
+    background-color: red;
+    position: absolute;
+    top: 0;
+    left: 50%; /* La ligne sera centrÃ©e par rapport Ã  la largeur de la page */
+    transform: translateX(-50%); /* Pour centrer la ligne correctement */
+  }
+  
+  
+  .registration-section {
+    flex: 1;
+    padding: 20px;
+  
+    /* Optionnel : vous pouvez ajouter des styles pour la partie d'inscription ici */
+  }
+  
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  td {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  label {
+    display: inline-block;
+    width: 120px; /* Adjust this value as needed to control the space between labels and inputs */
+  }
+  
+  /* Style for the "Se connecter" button */
+  .connecter-button {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .connecter-button:hover {
+    background-color: darkred;
+  }
+  .welcome-heading {
+    border-bottom: 2px solid red;
+    display: inline-block;
+    padding-bottom: 5px;
+  }
+  .photo-deprofil{ 
+    width: 200px; /* Ajustez cette valeur selon vos besoins */
+    height: 200px;}

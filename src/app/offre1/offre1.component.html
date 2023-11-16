@@ -1,0 +1,120 @@
+
+<img src="assets/sup.jpg" alt="uni" class="uni">
+<div class="container">
+
+  <img src="assets/esprit.jpg" alt="Votre photo"  class="photo">
+
+<div class="bande">
+  <img src="assets/formulaire.png" alt="formulaire" class="form"> 
+
+  <h1>Formulaire de postulation</h1>
+</div>
+<div class="container-form">
+<div class="bande1"><h2>Informations personelles :</h2>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()" >
+    <div class="formulaire">
+    <!-- Form fields -->
+    <div class="right">
+      <label for="nom">Nom:</label>
+      <input type="text" id="name" [(ngModel)]="formData.name" formControlName="name" required>
+    
+      <label for="prenom">Prénom:</label>
+      <input type="text" id="lastname" [(ngModel)]="formData.lastname" formControlName="lastname" required>
+   </div>
+   <div class="left">
+    <label for="email">Adresse Email:</label>
+    <input type="email" id="email" [(ngModel)]="formData.email" formControlName="email" required>
+  
+    <label for="option">Option:</label>
+    <div class="new-entry">
+      <select id="option" [(ngModel)]="formData.option" formControlName="selectedOption" (change)="onSelectedoptionChange()" required>
+    
+        <option value="DS">DS</option>
+        <option value="INFINI">INFINI</option>
+        <option value="BI">BI</option>
+        <option value="GL">GL</option>
+        <option value="SIM">SIM</option>
+        <option value="TWIN">TWIN</option>
+        <option value="SLEAM">SLEAM</option>
+        <option value="NIDS">NIDS</option>
+        <option value="SE">SE</option>
+        <option value="ARCTIC">ARCTIC</option>
+      </select>
+    </div>
+   </div></div>
+   <div class="bande2"><h3>Résultats Académiques:</h3>
+    <div class="partie" >
+      <div class="naw">
+        <h4>Où avez-vous effectué vos études :</h4>
+      
+          <label>
+            <input type="radio" formControlName="selectedEducation" value="ESPRIT" (change)="onSelectedEducationChange()">
+            ESPRIT
+          </label>
+        
+        
+          <label>
+            <input type="radio" formControlName="selectedEducation" value="Licence" (change)="onSelectedEducationChange()">
+            Licence
+          </label>
+       
+   
+          <label>
+            <input type="radio" formControlName="selectedEducation" value="prepa" (change)="onSelectedEducationChange()">
+            Prepa
+          </label>
+       
+      
+      
+
+          <h4>Vous devez ajouter vos relevés des notes</h4>
+
+          </div>
+          <div class="file-input-container ">
+            <input type="file" id="fileUpload" name="fileUpload" (change)="onFileChange($event)" accept=".jpg, .png, .pdf">
+            <!---->
+    </div>
+      <div class="sam">
+
+
+
+          <label>
+            Moyenne de la 1ère année :
+            <input type="number" formControlName="m1" [(ngModel)]="formData.m1" step="0.01" required >
+          </label>
+
+
+
+          <label>
+            Moyenne de la 2ème année :
+            <input type="number" formControlName="m2" [(ngModel)]="formData.m2" step="0.01" required >
+          </label>
+
+
+
+          <label>
+            Moyenne de la 3ème année :
+            <input type="number" formControlName="m3" [(ngModel)]="formData.m3" step="0.01" required >
+          </label>
+          <div *ngIf="selectedEducation === 'Licence'" class="sam">
+            <label>
+              Moyenne de 3ème année (Licence) :
+              <input type="number" formControlName="moyenne4" step="0.01">
+            </label>
+          </div>
+          
+        </div>
+        
+       
+
+        <button type="submit" class="nedia">Postuler</button>
+         
+    </div></div>
+    </form>
+    
+     
+</div>
+
+</div>
+
+</div>

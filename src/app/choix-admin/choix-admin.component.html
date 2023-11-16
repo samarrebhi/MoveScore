@@ -1,0 +1,42 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title> Offres de mobilité </title>
+    <base href="/">
+  </head>
+
+
+  <div class="cover">
+    <div class="cover-bg p-3 p-lg-4 text-white">
+      <div class="row">
+        <div class="col-lg-4 col-md-5">
+          <div class="avatar" ><img src="assets/esprit.jpg" width="200" height="200"/></div>
+        </div>
+        <div class="col-lg-8 col-md-7 text-center text-md-start">
+          <h2 class="h1 mt-2" data-aos="fade-left" >Mobilité internationale-Esprit Ecole d'Ingénieurs</h2>
+        </div>
+      </div>
+    </div>
+
+<h4>Veuillez choisir une offre de mobilité:</h4>
+  
+
+ 
+
+<div class="center">
+  <select name="offres" class="offres-select" [(ngModel)]="selectedOption">
+    <option value="">Type d'offre de mobilité --- Ecole d'ingénieurs</option>
+    <option value="">---------------</option>
+    <option value="dd-supgalilée">Double Diplome --- Sup Galillée-Paris 13</option>
+<option value="dd-sherbrooke">Double Diplome + bourse --- Sherbrooke(Québec)</option>
+<option value="dd-ensim">Doubme Diplome --- ENSIM (Ecole d'ingénieurs Le Mans Université)</option>
+<option value="se-ensim">Un semestre d'échange --- ENSIM (Ecole d'ingénieurs Le Mans Université)</option>
+<option value="ms-cy">Mastère --- CY Tech</option>
+<option value="ms-eurocom">Mastère --- EURECOM</option>
+ </select>
+ <div class="space"></div>
+ <div>
+    <button class="navigation-button" (click)="onNext()" >Suivant</button>
+ </div>
+<footer></footer>
+

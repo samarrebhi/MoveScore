@@ -1,0 +1,238 @@
+.photo {
+  position: absolute;
+  left: -20px;
+  top: -80px;
+  width: 250px;
+  height: 250px;
+  border-radius: 70%;
+  border: 2px solid darkred;
+}
+.uni {position: absolute;
+  bottom: 10px;
+  right: -20px;
+  top: -80px;
+  width: 260px;
+  height: 250px;
+  border-radius: 70%;
+  border: 2px solid darkred;
+}
+.uni img{width: 50%;
+  height: auto;
+  object-fit: cover;
+  border: 10px solid darkred;}
+
+.photo img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border: 10px solid darkred;
+}
+
+.bande {
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  width: 800px;
+  height: 55px;
+  background-color: darkred;
+  
+  transform: translateX(-50%);
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1; /* Move bande above other elements */
+}
+
+h1 {
+  font-size: 35px;
+  color: white;
+  margin-right: 20px;
+}
+
+.form {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.container-form {
+  position: absolute;
+  top: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+  height: 100%;
+  background-color: lightgrey;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1; /* Place form-container above bande1 */
+}
+
+.bande1 {
+  position: absolute;
+  border: 5px outset red;
+  top: 0;
+  left: 50%;
+  width: 800px;
+  height: 35px;
+  background-color: whitesmoke;
+  transform: translateX(-50%);
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 0; /* Keep bande1 below form-container */
+}
+.bande2 {
+  position: absolute;
+  border: 5px outset red;
+  top: 200px;
+  left: 50%;
+  width: 800px;
+  height: 35px;
+  background-color: whitesmoke;
+  transform: translateX(-50%);
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 0; /* Keep bande1 below form-container */
+}
+h2,h3{
+  font-size: 20px;
+  color: black;
+  left: 8px;
+  font-style: default;
+
+
+}
+
+.partie {
+  position: absolute;
+  top: 150px;
+  left: 60%;
+  transform: translateX(-50%);
+  width: 800px;
+  height: 100%;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.partie h4 {
+  margin-bottom: 10px;
+}
+
+.partie label {
+  margin-bottom: 5px;
+}
+
+.partie input[type="checkbox"],
+.partie input[type="number"] {
+  width: auto;
+  margin-right: 5px;
+}
+
+.partie .naw,
+.partie .sam {
+  flex: 1;
+}
+
+.partie .left label {
+  text-align: left;
+}
+
+.partie.rightlabel {
+  text-align: right;
+}
+
+.partie .sam label,
+.partie .sam input {
+  display: block;
+  margin-bottom: 10px;
+}
+.file-input-container {
+position: absolute;
+  top: 70px; /* Adjust the top value to position the file input */
+  left: 15%;
+  transform: translateX(-50%);
+  width: 800px;
+  height: 100%;
+
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column; /* Set the flex-direction to a column layout */
+  align-items: center;
+  justify-content: center;
+  z-index: 1;}
+
+.formulaire label,
+.formulaire input {
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Separate the form into two columns */
+.formulaire .left,
+.formulaire .right {
+  flex: 1; /* Take up equal space in the two columns */
+}
+
+/* Align labels to the left and right */
+.formulaire .left label {
+  text-align: left;
+}
+
+.formulaire .rightlabel {
+  text-align: right;
+}
+.formulaire {
+  position: absolute;
+  top: 90px; /* Adjust the top value to move the form below bande1 */
+  left: 60%;
+  transform: translateX(-50%);
+  width: 800px;
+  height: 100%;
+ 
+  border-radius: 20px;
+  display: flex;
+   /* Set the flex-direction to create a two-column layout */
+  align-items: center;
+  justify-content: center;
+  z-index: 1; /* Place form-container above bande1 */
+}
+.nedia{
+  background-color:darkred;
+  color:white;
+  position: absolute;
+  top: 120px; /* Adjust the top value to move the form below bande1 */
+  left: 40%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 80%;
+ 
+  border-radius: 20px;
+  display: flex;
+   /* Set the flex-direction to create a two-column layout */
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+
+}
+.navigation-button {
+  background-color: red;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  position: fixed;
+   top: 570px;
+  left: 20px;
+}

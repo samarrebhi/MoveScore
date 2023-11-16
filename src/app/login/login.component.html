@@ -1,0 +1,49 @@
+
+<div class="red-line"></div>
+<div class="container">
+  <div class="photo-section">
+  
+    <img src="assets/esprit.jpg" alt="Photo d'illustration" class="photo-image">
+  </div>
+  <div class="registration-section">
+
+<img src="assets/login.jpg" alt="Photo de profil" class="photo-deprofil">
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <table>
+    <tr>
+      <td>
+        <label for="identifiant">Identifiant:</label>
+        <br>
+        <input type="text" id="identifiant" formControlName="identifiant">
+        <div *ngIf="loginForm.get('identifiant')?.invalid && (loginForm.get('identifiant')?.dirty || loginForm.get('identifiant')?.touched)">
+          <small *ngIf="loginForm.get('identifiant')?.errors ">Identifiant requis</small>
+          <small *ngIf="loginForm.get('identifiant')?.hasError('invalidUsernameLength')">L'identifiant doit avoir exactement 10 caractères</small>
+          <small *ngIf="loginForm.get('identifiant')?.hasError('nonUpperCaseDigitsInUsername')">L'identifiant doit contenir uniquement des lettres en majuscule et des chiffres</small>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label for="motDePasse">Mot de passe:</label>
+        <br>
+        <input type="password" id="motDePasse" formControlName="motDePasse">
+        <div *ngIf="loginForm.get('motDePasse')?.invalid && (loginForm.get('motDePasse')?.dirty || loginForm.get('motDePasse')?.touched)">
+          <small *ngIf="loginForm.get('motDePasse')?.errors">Mot de passe requis</small>
+          <small *ngIf="loginForm.get('motDePasse')?.hasError('invalidPasswordLength')">Le mot de passe doit avoir exactement 8 caractères</small>
+          <small *ngIf="loginForm.get('motDePasse')?.hasError('nonDigitsInPassword')">Le mot de passe doit contenir uniquement des chiffres</small>
+        </div>
+      </td>
+    </tr>
+    <tr><td><div *ngIf="message" class="message">
+      {{message }}
+    </div></td></tr>
+    <tr>
+      <td>
+        <button class="connecter-button" type="submit">Se connecter</button>
+      </td>
+    </tr>
+  </table>
+</form>
+</div>
+</div>
+
